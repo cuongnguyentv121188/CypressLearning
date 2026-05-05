@@ -27,3 +27,4 @@ Overview:
     - FooterTest.js (verify)
     - ProductDetailsTest.js (Select random product -> verify: Img: be.visible, Name: have.text, Price: contain.text, Description: not.be.empty )
 12. Practice with API of getting categories and using String literal
+13. E2E for one simple scenario
