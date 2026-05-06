@@ -1,0 +1,414 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 9,
+    "passes": 8,
+    "pending": 1,
+    "failures": 0,
+    "testsRegistered": 9,
+    "passPercent": 88.88888888888889,
+    "pendingPercent": 11.11111111111111,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2026-05-06T16:24:36.237Z",
+    "end": "2026-05-06T16:24:56.090Z",
+    "duration": 19853
+  },
+  "results": [
+    {
+      "uuid": "d6b18422-81d1-47e1-885e-a82aa67c89e2",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\FooterTest.js",
+      "file": "cypress\\tests\\components\\FooterTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "258fc9c5-f415-48a3-beea-3ad1e1a959d7",
+          "title": "Footer Component Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify AboutUs Column",
+              "fullTitle": "Footer Component Test Verify AboutUs Column",
+              "timedOut": null,
+              "duration": 652,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const expectedAboutUsData = {\n  \"header\": \"About Us\",\n  \"description\": \"We believe performance needs to be validated at every stage of the software development cycle and our open source compatible, massively scalable platform makes that a reality.\"\n};\nfooterComp.getAboutUsData().then(actualAboutUsData => {\n  cy.wrap('').then(() => {\n    //cy.log(JSON.stringify(actualAboutUsData))\n    expect(actualAboutUsData).to.be.deep.equal(expectedAboutUsData);\n    //expect(actualAboutUsData.description).to.equal(expectedAboutUsData.description);\n  });\n});",
+              "err": {},
+              "uuid": "ddc30d81-a70f-4bcd-92ff-4d3e5e90fe84",
+              "parentUUID": "258fc9c5-f415-48a3-beea-3ad1e1a959d7",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify ContactUs Column",
+              "fullTitle": "Footer Component Test Verify ContactUs Column",
+              "timedOut": null,
+              "duration": 214,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const expectedContactUsData = {\n  \"header\": \"Get in Touch\",\n  \"address\": \"Address: 2390 El Camino Real\",\n  \"phone\": \"+440 123456\",\n  \"email\": \"demo@blazemeter.com\"\n};\nfooterComp.getContactUsData().then(actualContactUsData => {\n  cy.wrap('').then(() => {\n    //cy.log(JSON.stringify(actualContactUsData))\n    //expect(actualContactUsData).to.be.deep.equal(expectedContactUsData);\n    expect(actualContactUsData.header).to.equal(expectedContactUsData.header);\n    expect(actualContactUsData.description).to.contains(expectedContactUsData.address);\n    expect(actualContactUsData.description).to.contains(expectedContactUsData.phone);\n    expect(actualContactUsData.description).to.contains(expectedContactUsData.email);\n  });\n});",
+              "err": {},
+              "uuid": "94ea443d-f508-432f-bd15-5b415ea35cbe",
+              "parentUUID": "258fc9c5-f415-48a3-beea-3ad1e1a959d7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ddc30d81-a70f-4bcd-92ff-4d3e5e90fe84",
+            "94ea443d-f508-432f-bd15-5b415ea35cbe"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 866,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9487778a-e01d-49de-8464-24a99dc89b45",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\HeaderTest.js",
+      "file": "cypress\\tests\\components\\HeaderTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "98fec3ee-6969-43f3-83c5-b3d7ac01027b",
+          "title": "Header Component Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test for brand logo",
+              "fullTitle": "Header Component Test Test for brand logo",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "// Logo is visible and its text is not empty\nheaderComp.brandLogoImg().should('be.visible');\nheaderComp.brandLogo().should('contain.text', BRAND_TEXT);",
+              "err": {},
+              "uuid": "b3fc83c9-4832-4814-b7f3-3ef0a10d7401",
+              "parentUUID": "98fec3ee-6969-43f3-83c5-b3d7ac01027b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test for Header Menu",
+              "fullTitle": "Header Component Test Test for Header Menu",
+              "timedOut": null,
+              "duration": 26,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Verify header menu items in the header menu list are not empty\n// const headerComponent = new HeaderComponent();\n// headerComponent.headerMenuItemList().each(menuItem => {\n//     cy.wrap(menuItem).should('not.be.empty')\n// })\nconst expectedMenuDetail = [{\n  \"text\": \"Home (current)\",\n  \"href\": \"index.html\"\n}, {\n  \"text\": \"Contact\",\n  \"href\": \"#\"\n}, {\n  \"text\": \"About us\",\n  \"href\": \"#\"\n}, {\n  \"text\": \"Cart\",\n  \"href\": \"cart.html\"\n}, {\n  \"text\": \"Log in\",\n  \"href\": \"#\"\n}, {\n  \"text\": \"Sign up\",\n  \"href\": \"#\"\n}];\nheaderComp.getMenuDetails().then(actualMenuDetails => {\n  cy.wrap('').then(() => {\n    expect(actualMenuDetails).to.be.deep.equal(expectedMenuDetail);\n  });\n});",
+              "err": {},
+              "uuid": "e7660a13-0d17-4ff6-a417-eb1369b06f44",
+              "parentUUID": "98fec3ee-6969-43f3-83c5-b3d7ac01027b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e7660a13-0d17-4ff6-a417-eb1369b06f44"
+          ],
+          "failures": [],
+          "pending": [
+            "b3fc83c9-4832-4814-b7f3-3ef0a10d7401"
+          ],
+          "skipped": [],
+          "duration": 26,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "166382f9-c809-4df1-9a35-468fb09e229d",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\HomePageCategoryTest.js",
+      "file": "cypress\\tests\\components\\HomePageCategoryTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "02d28661-2b39-42a7-9066-57489a1a2eda",
+          "title": "HomePage Category Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should be able to filter phone product",
+              "fullTitle": "HomePage Category Test Should be able to filter phone product",
+              "timedOut": null,
+              "duration": 1664,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "verifyCategoryFilterBy(`${product}`);",
+              "err": {},
+              "uuid": "203a856b-cd58-4344-ba9c-25d54365aa9d",
+              "parentUUID": "02d28661-2b39-42a7-9066-57489a1a2eda",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be able to filter notebook product",
+              "fullTitle": "HomePage Category Test Should be able to filter notebook product",
+              "timedOut": null,
+              "duration": 804,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "verifyCategoryFilterBy(`${product}`);",
+              "err": {},
+              "uuid": "86e4ca59-3c3b-4319-a63c-e5039af103ac",
+              "parentUUID": "02d28661-2b39-42a7-9066-57489a1a2eda",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Should be able to filter monitor product",
+              "fullTitle": "HomePage Category Test Should be able to filter monitor product",
+              "timedOut": null,
+              "duration": 956,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "verifyCategoryFilterBy(`${product}`);",
+              "err": {},
+              "uuid": "b8d6de6b-7478-4ddf-b7ef-cd51dd315e78",
+              "parentUUID": "02d28661-2b39-42a7-9066-57489a1a2eda",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "203a856b-cd58-4344-ba9c-25d54365aa9d",
+            "86e4ca59-3c3b-4319-a63c-e5039af103ac",
+            "b8d6de6b-7478-4ddf-b7ef-cd51dd315e78"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3424,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "eb87e62c-caaf-45ff-bfc3-cb54b54a0ad4",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\ProductDetailsTest.js",
+      "file": "cypress\\tests\\components\\ProductDetailsTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c96bdb90-9674-4e7e-bd31-6de3f721ac9b",
+          "title": "Product Details Component Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Product Details",
+              "fullTitle": "Product Details Component Test Verify Product Details",
+              "timedOut": null,
+              "duration": 2047,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_DemoBlazeHomePageAPI.DemoBlazeHomePageAPI.getHomePageProduct().then(apiData => {\n  const randomProduct = apiData[Math.floor(Math.random() * apiData.length)]; // get random product from homepage\n  const randomeProductTitle = randomProduct.title.trim().replace(\"\\n\", \"\"); // get title to verify\n  cy.contains(randomProduct.title.trim().replace(\"\\n\", \"\")).click(); //select any product\n  const productDetails = new _ProductDetailsComponent.default();\n  productDetails.getProductImg().should(\"be.visible\");\n  productDetails.getProductName().should(\"have.text\", randomeProductTitle);\n  productDetails.getProductPrice().should(\"contain.text\", randomProduct.price);\n  productDetails.getProductDescription().should(\"not.be.empty\");\n  //cy.wait(3000); DEBUG\n});",
+              "err": {},
+              "uuid": "ced302bc-31ad-40d3-941d-f532c91099fb",
+              "parentUUID": "c96bdb90-9674-4e7e-bd31-6de3f721ac9b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ced302bc-31ad-40d3-941d-f532c91099fb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2047,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4c0af1f3-1165-4cbf-8d95-a7304f3d696d",
+      "title": "",
+      "fullFile": "cypress\\tests\\order\\DemoBlazeOrderItem.js",
+      "file": "cypress\\tests\\order\\DemoBlazeOrderItem.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "240ddaff-74db-473a-8f7b-5eca7e76d6c2",
+          "title": "Product Details Component Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Order item as guest",
+              "fullTitle": "Product Details Component Test Order item as guest",
+              "timedOut": null,
+              "duration": 6101,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_DemoBlazeHomePageAPI.DemoBlazeHomePageAPI.getHomePageProduct().then(apiData => {\n  // get random product from homepage\n  const randomProduct = apiData[Math.floor(Math.random() * apiData.length)];\n  // get title to verify\n  const randomeProductTitle = randomProduct.title.trim().replace(\"\\n\", \"\");\n  //select any product\n  cy.contains(randomeProductTitle).click();\n  // Click on Add to Cart button\n  cy.contains('Add to cart').click();\n  // Go to cart\n  cy.get('#cartur').click();\n  // Verify Cart detail\n  // Click on Place Order\n  cy.contains('Place Order').click();\n  // Input Information of guest\n  cy.get('#name').type('Test');\n  cy.get('#country').type('Canada');\n  cy.get('#city').type('Saskatoon');\n  cy.get('#card').type('0123456789');\n  cy.get('#month').type('05');\n  cy.get('#year').type('2026');\n  // Click on Purchase\n  cy.contains('Purchase').click();\n  // Verify Confirm Order Popup\n  cy.get('.sweet-alert h2').should('contain.text', 'Thank you for your purchase!');\n  cy.get('.sweet-alert .lead').then(confirmOrderDetails => {\n    cy.wrap(confirmOrderDetails).should('contain.text', randomProduct.price);\n    cy.wrap(confirmOrderDetails).should('contain.text', 'Card Number: 0123456789');\n    cy.wrap(confirmOrderDetails).should('contain.text', 'Name: Test');\n  });\n  //cy.wait(3000); //DEBUG\n});",
+              "err": {},
+              "uuid": "5abd6088-470b-48ad-9dcd-b72dbe703232",
+              "parentUUID": "240ddaff-74db-473a-8f7b-5eca7e76d6c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5abd6088-470b-48ad-9dcd-b72dbe703232"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6101,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

@@ -5,13 +5,20 @@
   "main": "index.js",
   "scripts": {
     "dev": "cypress open",
-    "test": "cypress run --browser chrome --headed"
+    "test": "cypress run --browser chrome --headed",
+    "test:mocha-reporter": "yarn test --reporter mochawesome --reporter-options reportDir=\"results\",overwrite=false,html=false,json=true",
+    "merge-report": "mochawesome-merge \"results/*.json\" > index.json",
+    "format-report": "marge index.json",
+    "open-report": "yarn merge-report && yarn format-report && serve mochawesome-report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "cypress": "15.12.0"
+    "cypress": "15.12.0",
+    "marge": "^1.0.1",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.1"
   }
 }

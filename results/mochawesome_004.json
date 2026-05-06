@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-05-06T16:24:53.988Z",
+    "end": "2026-05-06T16:24:56.090Z",
+    "duration": 2102,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eb87e62c-caaf-45ff-bfc3-cb54b54a0ad4",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\ProductDetailsTest.js",
+      "file": "cypress\\tests\\components\\ProductDetailsTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c96bdb90-9674-4e7e-bd31-6de3f721ac9b",
+          "title": "Product Details Component Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Product Details",
+              "fullTitle": "Product Details Component Test Verify Product Details",
+              "timedOut": null,
+              "duration": 2047,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_DemoBlazeHomePageAPI.DemoBlazeHomePageAPI.getHomePageProduct().then(apiData => {\n  const randomProduct = apiData[Math.floor(Math.random() * apiData.length)]; // get random product from homepage\n  const randomeProductTitle = randomProduct.title.trim().replace(\"\\n\", \"\"); // get title to verify\n  cy.contains(randomProduct.title.trim().replace(\"\\n\", \"\")).click(); //select any product\n  const productDetails = new _ProductDetailsComponent.default();\n  productDetails.getProductImg().should(\"be.visible\");\n  productDetails.getProductName().should(\"have.text\", randomeProductTitle);\n  productDetails.getProductPrice().should(\"contain.text\", randomProduct.price);\n  productDetails.getProductDescription().should(\"not.be.empty\");\n  //cy.wait(3000); DEBUG\n});",
+              "err": {},
+              "uuid": "ced302bc-31ad-40d3-941d-f532c91099fb",
+              "parentUUID": "c96bdb90-9674-4e7e-bd31-6de3f721ac9b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ced302bc-31ad-40d3-941d-f532c91099fb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2047,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
