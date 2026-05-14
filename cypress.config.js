@@ -8,7 +8,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     //specPattern: "./cypress/tests/**.*", // execute any test files in folder tests
-    specPattern: "./cypress/tests/*/*", 
+    //specPattern: "./cypress/tests/*/*", 
+    specPattern: "./cypress/api-test/*", // for api-testing
     baseUrl: "https://www.demoblaze.com/"
   },
   //set timeout for whole project

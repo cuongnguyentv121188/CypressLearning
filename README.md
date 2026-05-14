@@ -14,6 +14,7 @@ Overview:
 5. Get Element Data by using cy.wrap()
 6. Practice using WITHIN and EACH to get an element in a array
 7. Get Data from API and Verify it (simple GET request)
+ - Practice with GET API request and verify: status, body length
 8. Practice with Before and BeforeEach, make the code becomes clean and easy to maintain
 9. Use API to login and Verify the HomePage is displayed successful
 10. Practice with Custom Command of Cypress
