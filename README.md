@@ -1,4 +1,4 @@
-This is Cypress Demo
+This is Cypress Learning
 Overview:
 1. Installed Cypress and Executed simple Login case
 2. Understand default Timeout of the commands in cases of finding unavailable elements
