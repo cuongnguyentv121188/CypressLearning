@@ -15,9 +15,10 @@ Overview:
 6. Practice using WITHIN and EACH to get an element in a array
 7. Get Data from API and Verify it
  - simple GET request
- - Practice with GET API request and verify: status, body length, no empty items with DESTRUCTURE response
- - Practice with Post API request and verify requestBody = responseBody using DESTRUCTURE
- - Practice with Put API request and verify
+ - Practice with GET request and verify: status, body length, no empty items with DESTRUCTURE response
+ - Practice with Post request and verify requestBody = responseBody using DESTRUCTURE
+ - Practice with Put request and verify
+ - Practice with Delete request and verify
 8. Practice with Before and BeforeEach, make the code becomes clean and easy to maintain
 9. Use API to login and Verify the HomePage is displayed successful
 10. Practice with Custom Command of Cypress
